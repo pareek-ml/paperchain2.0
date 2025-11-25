@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "paperchain_backend": {
+      "main": "src/paperchain_backend/main.mo",
+      "type": "motoko"
+    },
+    "paperchain_frontend": {
+      "dependencies": [
+        "paperchain_backend"
+      ],
+      "source": [
+        "src/paperchain_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "paperchain_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
