@@ -20,7 +20,7 @@ const App = () => {
           console.error("Canister ID for paperchain_backend is missing. Check your .env file or dfx deploy output.");
           return;
         }
-        
+
         // Create an agent explicitly to handle root key fetching
         // Use local host for development to ensure correct signature verification behavior
         const host = process.env.DFX_NETWORK === 'ic' ? 'https://ic0.app' : 'http://localhost:4943';
@@ -51,7 +51,7 @@ const App = () => {
     <div style={{ textAlign: 'center', padding: '50px' }}>
       <img src="/logo2.svg" alt="PaperChain Logo" style={{ maxWidth: '200px', marginBottom: '20px' }} />
       <h1>PaperChain</h1>
-      
+
       <div style={{ display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center', marginTop: '20px' }}>
         <LoginButton />
         {identity && <Button onClick={clear}>Logout</Button>}
